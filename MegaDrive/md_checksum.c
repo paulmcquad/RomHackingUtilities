@@ -17,7 +17,7 @@ uint16_t calculate_checksum(uint8_t *rom) {
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        printf("Usage: %s <filename>\n", argv[0]);
+        printf("Usage: %s <rom_file>\n", argv[0]);
         return 1;
     }
 
