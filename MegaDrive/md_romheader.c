@@ -8,9 +8,12 @@ void dump_rom_header(uint8_t *rom) {
     printf("Console Name: %.16s\n", rom + 0x100);
     printf("Copyright Information: %.16s\n", rom + 0x110);
     printf("Game Title: %.48s\n", rom + 0x120);
+    printf("Overseas Title: %.48s\n", rom + 0x150);
     printf("Game Serial Number: %.14s\n", rom + 0x180);
     uint16_t checksum = (rom[0x18E] << 8) | rom[0x18F];
     printf("Checksum: 0x%04X\n", checksum);
+    printf("I/O Device Support: %.16s\n", rom + 0x190);
+    printf("Country Codes: %.16s\n", rom + 0x1F0);
 }
 
 int main(int argc, char *argv[]) {
